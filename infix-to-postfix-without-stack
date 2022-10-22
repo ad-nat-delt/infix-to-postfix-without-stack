@@ -82,7 +82,6 @@ void WritePostfixBrackets(char expr[])
         }
     }
     newExp[k]='\0';
-
     printf("Equivalent postfix expression = %s",newExp);
 }
 
@@ -95,7 +94,7 @@ void PostNoBrackets(char expr[], int start, int end)
     for(i=end; i>=start; i--)
     {
         if (expr[i] == '^' && converted[i] != 1)
-			{
+		{
                 converted[i]=1;
                 converted[i-1]=converted[i+1]=1;
                 GetLeftOperand(expr, left, i, start);
